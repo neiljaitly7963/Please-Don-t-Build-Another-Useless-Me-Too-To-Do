@@ -37,6 +37,7 @@ form button {
   font-size: 1.3rem;
   border: none;
   background: #202020;
+  color: #e2e2e2;
 }
 
 form button {
@@ -72,6 +73,7 @@ form button:hover {
   font-size: 1.2rem;
   color: #e2e2e2;
   border-radius: 3px;
+  transition: all 0.6s ease;
 }
 
 .todo li {
@@ -98,4 +100,14 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.fall {
+  transform: translate3d(1rem);
+  opacity: 0;
 }

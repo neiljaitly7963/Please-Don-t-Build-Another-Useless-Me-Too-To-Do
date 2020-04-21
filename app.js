@@ -43,6 +43,15 @@ function deleteCheck(event) {
   //Delete todo
   if (item.classList[0] === "trash-btn") {
     const tobeDeletedItem = item.parentElement;
-    tobeDeletedItem.remove();
+    //Animation
+    tobeDeletedItem.classList.add("fall");
+    tobeDeletedItem.addEventListener("transitionend", function() {
+      tobeDeletedItem.remove();
+    });
+  }
+
+  if (item.classList[0] === "complete-btn") {
+    const tobeCheckedoff = item.parentElement;
+    tobeCheckedoff.classList.toggle("completed");
   }
 }
